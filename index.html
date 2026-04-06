@@ -16,7 +16,7 @@ document.getElementById('finder').style.fontFamily = font
 document.getElementById('word').addEventListener('input', function() {
   const w = this.value.toLowerCase().replace(/[^a-z ,\.]/g, '')
   const p = document.getElementById('prob')
-  if (!w.length) { p.textContent = '-'; p.classList.remove('show'); return }
+  if (!w.length) { p.textContent = ''; p.classList.remove('show'); return }
   const exp = w.length * Math.log10(30)
   const mantissa = Math.pow(10, exp % 1)
   const exponent = -Math.floor(exp)
