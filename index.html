@@ -1,0 +1,14 @@
+<!doctype html><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>cs2 gen</title><style>@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);*,::after,::before{box-sizing:border-box;margin:0;padding:0}:root{--bg:#0d0d0d;--surface:#141414;--border:#222;--accent:#e8e8e8;--font:'Lato',sans-serif}body{background:var(--bg);font-family:var(--font);font-size:13px;padding:0}#box{width:100%;margin:0 auto;background:var(--surface);border:1px solid var(--border);padding:0;color:#999;font-size:11.5px;line-height:1.7;white-space:pre-wrap;overflow-wrap:break-word}</style><div id=box></div><script>
+function a(n) {
+  const b = document.getElementById('box');
+  let t = '';
+  for (let i = 0; i < n * 300; i++) t += 'abcdefghijklmnopqrstuvwxyz , .'[Math.floor(Math.random() * 30)];
+  b.appendChild(document.createTextNode(t));
+}
+
+a(60);
+
+window.addEventListener('scroll', () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 300) a(40);
+});
+</script>
