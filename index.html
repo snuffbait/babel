@@ -20,8 +20,8 @@ document.getElementById('word').addEventListener('input', function() {
   const exp = w.length * Math.log10(30)
   const mantissa = Math.pow(10, exp % 1)
   const exponent = -Math.floor(exp)
-  const oneIn = Math.pow(30, w.length)
-  p.textContent = `p = ${mantissa.toFixed(4)} × 10^${exponent}  (1 in ${oneIn.toLocaleString()})`
+  const oneinn = Math.pow(30, w.length)
+  p.textContent = `p = ${mantissa.toFixed(4)} × 10^${exponent}  (1 in ${oneinn.toLocaleString()})`
   p.classList.add('show')
 })
 
